@@ -63,6 +63,7 @@ ul.posts li {
     padding-bottom: 30%; /* = width for a 1:1 aspect ratio */
     margin:1.66%;
     overflow:hidden;
+    color:$highlight;
 }
 
 .linksquarecontent {
@@ -71,11 +72,13 @@ ul.posts li {
     width:90%; /* = 100% - 2*5% padding */
     padding: 10% 5%;
 }
+
 .table{
     display:table;
     height:100%;
     width:100%;
 }
+
 .table-cell{
     display:table-cell;
     vertical-align:middle;
