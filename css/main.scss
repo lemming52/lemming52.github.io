@@ -59,15 +59,35 @@ ul.posts li {
 .linksquareframe {
     float:left;
     position: relative;
-    width: 30%;
-    padding-bottom: 30%; /* = width for a 1:1 aspect ratio */
-    margin:1.66%;
+    width: 21%;
+    padding-bottom: 21%; /* = width for a 1:1 aspect ratio */
+    margin:2%;
     overflow:hidden;
-    color:$highlight;
+    background-color:$gray;
+    transition:0.35s;
+}
+
+
+.linksquaresidebar {
+    float:left;
+    position: relative;
+    width: 90%;
+    padding-bottom: 90%; /* = width for a 1:1 aspect ratio */
+    margin:10%;
+    overflow:hidden;
+    background-color:$gray;
+    transition:0.35s;
+}
+
+
+.linksquareframe:hover {
+  background-color: $highlight;
+  color: white;
 }
 
 .linksquarecontent {
     position:absolute;
+    text-align:center;
     height:80%; /* = 100% - 2*10% padding */
     width:90%; /* = 100% - 2*5% padding */
     padding: 10% 5%;
@@ -84,4 +104,75 @@ ul.posts li {
     vertical-align:middle;
     height:100%;
     width:100%;
+}
+
+.linksquares {
+    position: relative;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin-right: 40%;
+    text-align: left;
+  }
+
+
+.sidebar {
+  text-align: center;
+  padding: 2rem 1rem;
+  overflow: auto;
+}
+@media (min-width: 32em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    text-align: left;
+  }
+}
+
+.sidebar p {
+  font-size: 12px;
+  color: $gray;
+}
+
+/* About section */
+.sidebar-about h1 {
+  color: $highlight;
+  margin-top: 0;
+  font-size: 3vw;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  margin-bottom: 1rem;
+}
+.sidebar-nav-item {
+  display: block;
+  line-height: 1.75;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: underline;
+}
+.sidebar-nav-item.active {
+  font-weight: bold;
+}
+
+/* Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
+
+@media (min-width: 48em) {
+  .sidebar-sticky {
+    /*    position: absolute;*/
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
 }
