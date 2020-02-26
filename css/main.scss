@@ -5,7 +5,7 @@
 
 body {
     font-family:'Roboto', 'Helvetica', 'Arial', 'Sans-Serif';
-    margin: 60px auto;
+    margin: 0px auto;
     width: 70%;
 }
 nav ul, footer ul {
@@ -26,7 +26,7 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 6em;
+    font-size: 3rem;
     font-family:'Roboto', 'Helvetica', 'Arial', 'Sans-Serif';
     font-weight:100;
     color:$highlight;
@@ -71,16 +71,16 @@ ul.posts li {
 .linksquaresidebar {
     float:left;
     position: relative;
-    width: 90%;
-    padding-bottom: 90%; /* = width for a 1:1 aspect ratio */
-    margin:10%;
+    width: 30%;
+    padding-bottom: 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
     overflow:hidden;
     background-color:$gray;
     transition:0.35s;
 }
 
 
-.linksquareframe:hover {
+.linksquaresidebar:hover {
   background-color: $highlight;
   color: white;
 }
@@ -107,30 +107,31 @@ ul.posts li {
 }
 
 .linksquares {
+    width: 100%;
     position: relative;
     top:0;
     bottom: 0;
     left: 0;
     right: 0;
+    margin: auto;
 
-    margin-right: 40%;
     text-align: left;
   }
 
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   overflow: auto;
 }
-@media (min-width: 32em) {
+@media (min-width: 40em) {
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     width: 25%;
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -139,11 +140,16 @@ ul.posts li {
   color: $gray;
 }
 
+.sidebar a {
+    text-decoration: none;
+    color: $highlight;
+}
+
 /* About section */
 .sidebar-about h1 {
   color: $highlight;
   margin-top: 0;
-  font-size: 3vw;
+  font-size: 3rem;
 }
 
 /* Sidebar nav */
@@ -174,5 +180,25 @@ a.sidebar-nav-item:focus {
     right: 1rem;
     bottom: 1rem;
     left: 1rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .content {
+    max-width: 95%;
+    margin-left: 18rem;
+    margin-right: 0rem;
+  }
+}
+
+.content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 64em) {
+  .content {
+    margin-left: 18rem;
+    margin-right: 0rem;
   }
 }
