@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html>
+        {% include head.html %}
+        <link rel="stylesheet" href={{ "css/justifiedGallery.min.css" | relative_url }}/>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src={{ "js/jquery.justifiedGallery.min.js" | relative_url }}></script>
+        {% include sidebar.html %}
+        <body>
+           <div class="content container">
+                <div id="mygallery" >
+                    <a href="">
+                        <img alt="Title 1" src={{ "img/urg.png" | relative_url }}/>
+                    </a>
+                    <a href="">
+                        <img alt="Title 2" src={{ "img/urg.png" | relative_url }}/>
+                    </a>
+                </div>
+            </div>
+        </body>
+        <script type="text/javascript">$("#mygallery").justifiedGallery();</script>
+    </html>
