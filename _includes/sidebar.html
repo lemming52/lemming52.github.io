@@ -2,7 +2,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="{{ "/about" | relative_url }}">
+        <a href="{{ "/" | relative_url }}">
           {{ site.title }}
         </a>
       </h1>
@@ -30,8 +30,8 @@
               </div>
           </div>
       </a>
-      <a href="">
-          <div class="linksquaresidebar">
+      <a href="{{ "/gallery" | relative_url }}">
+          <div class="linksquaresidebar {% if page.url == "/gallery" %} active{% endif %}">
               <div class="linksquarecontent">
                   <div class="table">
                       <div class="table-cell">
