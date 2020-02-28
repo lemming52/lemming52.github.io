@@ -6,16 +6,24 @@
         <script src={{ "js/jquery.justifiedGallery.min.js" | relative_url }}></script>
         {% include sidebar.html %}
         <body>
-           <div class="content container">
-                <div id="mygallery" >
-                    <a href="">
-                        <img alt="Title 1" src={{ "img/urg.png" | relative_url }}/>
-                    </a>
-                    <a href="">
-                        <img alt="Title 2" src={{ "img/urg.png" | relative_url }}/>
-                    </a>
+            <div class="gallery_content container">
+                <div class="gallery">
+                    <div id="mygallery" >
+                        {% for image in site.static_files %}
+                            {% if image.path contains 'img/thumbnails' %}
+                                <a href="assets/img/{{ image.name }}">
+                                <img src="{{ image.path }}" />
+                            </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </body>
-        <script type="text/javascript">$("#mygallery").justifiedGallery();</script>
+        <script type="text/javascript">$("#mygallery").justifiedGallery({
+            rowHeight: 240,
+            maxHeight:240,
+            captions: false,
+            margins: 10
+        });</script>
     </html>

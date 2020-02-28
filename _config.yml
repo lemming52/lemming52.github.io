@@ -25,6 +25,13 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: http://rothko.io # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lemming52
 
+defaults:
+  - scope:
+      path: "assets/img/D*.jpg"
+    values:
+      image: true
+      layout: image
+
 # Build settings
 theme: minima
 plugins:
