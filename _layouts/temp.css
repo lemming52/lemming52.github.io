@@ -1,0 +1,182 @@
+---
+---
+
+@import "variables";
+
+body {
+    font-family:'Roboto', 'Helvetica', 'Arial', 'Sans-Serif';
+    margin: 60px auto;
+    width: 70%;
+}
+nav ul, footer ul {
+    font-family:'Roboto', 'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: $emphasis;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 6em;
+    font-family:'Roboto', 'Helvetica', 'Arial', 'Sans-Serif';
+    font-weight:100;
+    color:$highlight;
+}
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+ul.posts {
+    margin: 20px auto 40px;
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+
+.center {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.linksquareframe {
+    float:left;
+    position:relative;
+    width: 21%;
+    padding-bottom: 21%; /* = width for a 1:1 aspect ratio */
+    margin:2%;
+    overflow:hidden;
+    background-color:$gray;
+    transition:0.35s;
+}
+
+
+.linksquaresidebar {
+    float:left;
+    position: relative;
+    width: 10%;
+    padding-bottom: 10%; /* = width for a 1:1 aspect ratio */
+    margin: 80%;
+    overflow:hidden;
+    background-color:$gray;
+    transition:0.35s;
+}
+
+
+.linksquareframe:hover {
+  background-color: $highlight;
+  color: white;
+}
+
+.linksquarecontent {
+    position:absolute;
+    text-align:center;
+    height:80%; /* = 100% - 2*10% padding */
+    width:90%; /* = 100% - 2*5% padding */
+    padding: 10% 5%;
+}
+
+.table{
+    display:table;
+    height:100%;
+    width:100%;
+}
+
+.table-cell{
+    display:table-cell;
+    vertical-align:middle;
+    height:100%;
+    width:100%;
+}
+
+.linksquares {
+    width: 100%
+    position: relative;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    text-align: left;
+  }
+
+
+.sidebar {
+  text-align: center;
+  padding: 10% 5%;
+  overflow: auto;
+}
+@media (min-width: 32em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    text-align: left;
+  }
+}
+
+.sidebar p {
+  font-size: 12px;
+  color: $gray;
+}
+
+.sidebar a {
+    margin: 0;
+}
+
+/* About section */
+.sidebar-about h1 {
+  color: $highlight;
+  margin-top: 0;
+  font-size: 3vw;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  margin-bottom: 1rem;
+}
+.sidebar-nav-item {
+  display: block;
+  line-height: 1.75;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: underline;
+}
+.sidebar-nav-item.active {
+  font-weight: bold;
+}
+
+/* Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
+
+@media (min-width: 48em) {
+  .sidebar-sticky {
+    /*    position: absolute;*/
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
