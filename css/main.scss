@@ -65,7 +65,6 @@ ul.posts li {
     overflow:hidden;
     background-color:$gray;
     transition:0.35s;
-    max-width: 12em;
 }
 
 
@@ -78,7 +77,6 @@ ul.posts li {
     overflow:hidden;
     background-color:$gray;
     transition:0.35s;
-    max-width: 16em;
 }
 
 .linksquaresidebar.active {
@@ -114,7 +112,7 @@ ul.posts li {
 }
 
 .linksquares {
-    width: 100%;
+    width: 80%;
     position: relative;
     top:0;
     bottom: 0;
