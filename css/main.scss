@@ -163,12 +163,21 @@ ul.posts li {
 .bg{
   background-position:center center;
   background-repeat:no-repeat;
-  background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+  background-size:contain; /* you change this to "contain" if you don't want the images to be cropped */
   color:#fff;
 }
 
+.linksquarecontent .rs{
+    width:80%;
+    height:auto;
+    vertical-align:middle;
+    max-height:90%;
+    max-width:100%;
+    margin: auto;
+}
+
 .linkedin{
-  background-image: url('../assets/img/linkedin.png');
+  background-image: url('../assets/img/linkedin.svg');
 }
 
 
