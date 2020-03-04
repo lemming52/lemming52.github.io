@@ -6,7 +6,7 @@
             <div class="gallery_content container">
                 <div class="gallery">
                     <div id="mygallery" >
-                        {% assign sorted = (site.static_files | sort: 'title')%}
+                        {% assign sorted = (site.static_files | sort: 'title') | reverse %}
                         {% for image in sorted %}
                             {% if image.path contains 'img/thumbnails' %}
                                 <a href="assets/img/{{ image.name }}">
